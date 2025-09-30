@@ -1,4 +1,4 @@
-# demorest
+# DEMOREST
 
 API de gerenciamento de tarefas (Task Manager API)
 
