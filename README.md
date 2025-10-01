@@ -18,7 +18,21 @@
    cd demorest
 ````
 ### 2. Certifique-se de ter Java (versão compatível) e Maven instalados.
-### 3. Configure as variáveis de ambiente ou arquivos de configuração (por exemplo, application.properties ou application.yml) — banco de dados, porta, credenciais etc.
+### 3. Configure as variáveis de ambiente ou arquivos de configuração (por exemplo, application.properties ou application.yml) — criar banco de dados, porta, credenciais etc.
+Para acessar as configurações do banco de dados : 
+- src/main/resources/application.properties
+```properties
+spring.application.name=demorest
+#DATASOURCE
+spring.datasource.url= jdbc:mysql://localhost:3306/bd_rest?createDatabaseIfNotExist=true
+spring.datasource.username= root
+spring.datasource.password= root
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#JPA
+spring.jpa.hibernate.ddl-auto= update
+spring.jpa.show-sql= true
+spring.jpa.open-in-view= true
+   ````
 ### 4. Execute o Main (DemorestApplication.java).
 ### 5. A API estará disponível em http://localhost:8080.
 ## 6. Configure o Postman.
